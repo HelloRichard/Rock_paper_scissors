@@ -3,6 +3,24 @@ button {
   height: 100px;
   width: 100px;
   margin: 10px 15px;
+  padding: 10px;
   background-color: white;
+  position:relative;
+  top: 50%;
+  left: 35%;
+}
+form {
+  padding: 10px;
+  margin: 10px;
+}
+.clear {
+  clear: both;
+  position: relative;
+  top: 50%;
+  left: 35%;
+}
+
+#title {
+  text-align: center;
 }
 

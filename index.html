@@ -5,17 +5,38 @@
   <link rel="stylesheet" type="text/css" href="main.css">
   <title>Rock, Paper, Scissors</title>
 </head>
-<body>
-  <h1 id="title">Come play rock, paper, scissors with a bot!</h1>
-  <button onclick="answer(event)">
-    <img src="rock.png" alt="rock" width="80px" />
-  </button>
-  <button onclick="answer(event)">
-    <img src="paper.png" alt="paper" width="80px" />
-  </button>
-  <button onclick="answer(event)">
-    <img src="scissors.png" alt="Scissors" width="80px" />
-  </button>
-<style src="rock_paper_scissors.js"></style>
-</body>
+  <body>
+    <h1 id="title">Come play rock, paper, scissors with a bot!</h1>
+  
+  <form id="myForm">
+    Minutes: <input type="text" id="min" name="min" value="0" size="3" maxlength="3" /> &nbsp; &nbsp; 
+    Seconds: <input type="text" id="sec" name="sec" value="0" size="2" maxlength="2" /><br />
+    <br />
+    <input type="button" id="btnTimer" value="Start" onclick="countdownTimer()"/>
+    <input type="button" value="Stop" onclick="cdpause()">
+    <input type="button" value="Reset" onclick="cdreset()">
+  </form>
+
+  <p>Time Remaining: &nbsp; <span id="timeMin">00</span>:<span id="timeSec">00</span></p>
+
+  <div id="clicker">
+    <button onclick="choose('rock')">
+      <img src="rock.png" alt="rock" width="80px" />
+    </button>
+    <button onclick="choose('paper')">
+      <img src="paper.png" alt="paper" width="80px" />
+    </button>
+    <button onclick="choose('scissors')">
+      <img src="scissors.png" alt="scissors" width="80px" />
+    </button>
+    <button onclick="compare(user, computerChoice)">
+      Result!
+    </button>
+  </div>
+  <div class="clear"></div>
+  <p id="result" align="center"></p>
+
+  <script src="rock_paper_scissors.js"></script>
+
+  </body>
 </html>
